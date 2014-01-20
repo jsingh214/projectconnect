@@ -1,19 +1,23 @@
+/* Validate at http://jigsaw.w3.org/css-validator/ */
+
 html {
     background: url(../images/logo.jpg) no-repeat;
     background-size: 100%;
 }
+
 body {
-    font-family:"Courier New", Lucida Console, Monospace;
+    font-family: "Courier New", "Lucida Console", Monospace;
     color:white;
 }
 
 h1 {
     text-align:left;
-	margin:-300px
+    margin:-300px;
 }
+
 form {
     display: inline-block;
-	page-break-before:always
+    page-break-before:always;
 }
 
 #content-home {
@@ -23,8 +27,7 @@ form {
     margin: -150px 0 0 -350px;
     top: 50%;
     left: 50%;
-	font-size: 35px;
-	
+    font-size: 35px;
 }
 
 #content-index {
@@ -34,7 +37,7 @@ form {
     margin: -150px 0 0 -250px;
     top: 50%;
     left: 50%;
-	font-size: 30px;
+    font-size: 30px;
 }
 
 #content-create {
@@ -44,13 +47,14 @@ form {
     margin: -200px 0 0 -200px;
     top: 50%;
     left: 50%;
-	font-size: 25px;
+    font-size: 25px;
 }
 
 #container {
     height: 100%;
     width: 100%;
 }
+
 th {
     height:50px;
 }
@@ -61,9 +65,8 @@ input {
     border-radius: 7px;
 }
 
-input:focus { 
+input:focus {
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
 }
-

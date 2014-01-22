@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <?php session_start(); ?>
 <!--The home page contains a table where users can pick devices to configure.-->
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf8">
         <link rel="stylesheet" type="text/css" href="main/style.css">
-        <meta http-equiv="content-type" content="text/html;charset=utf-8">
         <title>Home</title>
     </head>
     <h1><a href=”logout.php”>Logout</a></h2>

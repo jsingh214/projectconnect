@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<?php 
+session_start();
+if(empty($_SESSION['username'])) {
+ echo 'Incorrect username or password, please try again...';
+}
+?>
+ 
 <!-- This is the login page for project connect.-->
 <html lang="en">
 
@@ -12,7 +20,7 @@
         <div id="content-index">
             <div id="center">
             <!--Form code for logging into connect's system.-->
-                <form id='login' action='login.php' method='post' accept-charset='UTF-8'>
+                <form id='login' action='validation.php' method='post' accept-charset='UTF-8'>
                     <fieldset>
                         <legend>Login</legend>
                         <input type='hidden' name='submitted' id='submitted' value='1' />

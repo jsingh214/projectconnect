@@ -33,9 +33,6 @@ header(“Location: home.php”);
                         <div class="break">
                             <input type='submit' name='Submit' value='Submit' />
                         </div>
-                        <div class="break">
-                        <a href="create.php">Sign Up</a>
-                        </div>
                         </div>
                     </fieldset>
                 </form>

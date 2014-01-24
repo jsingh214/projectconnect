@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<?php
-session_start();
-if(isset($_SESSION['username']) && isset($_SESSION['password'])){
-header(“Location: home.php”);
-}
-?>
 <!-- This is the login page for project connect.-->
 <html lang="en">
 

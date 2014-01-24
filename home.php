@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
 <!--The home page contains a table where users can pick devices to configure.-->
 <html lang="en">
     <head>

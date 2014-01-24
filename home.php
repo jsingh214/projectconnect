@@ -8,8 +8,6 @@
     </head>
     <h1><a href=”logout.php”>Logout</a></h2>
     <body>
-        <div id="container">
-            <div id="content-home">
                 <table border="1">
                     <tr>
                         <th>Select:</th>
@@ -39,8 +37,6 @@
                     </tr>
                 </table>
                 <input type="button" value="Select Pod" onclick="selectPod()"></input>
-            </div>
-        </div>
     </body>
 
 </html>

@@ -18,13 +18,12 @@ if (empty($_POST['username'])) {
     $data = mysql_fetch_array($userdata, MYSQL_ASSOC);
 
     if(mysql_num_rows($userdata) == 1){
-
 session_start();
-
 $_SESSION['username'] = $username;
-header('Location: index.php');
+header('Location: home.php');
 
     }else{
-header('Location: home.php');
+header('Location: index.php');
+echo "<p>You username or password is incorrect</p>";
     }
 ?>

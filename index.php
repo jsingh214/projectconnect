@@ -1,24 +1,13 @@
 <!DOCTYPE html>
 
-<?php 
-session_start();
-if(empty($_SESSION['username'])) {
- echo 'Incorrect username or password, please try again...';
-}
-?>
- 
 <!-- This is the login page for project connect.-->
 <html lang="en">
-
     <head>
         <meta charset="utf8">
         <link rel="stylesheet" type="text/css" href="main/style.css">
         <title>Welcome</title>
     </head>
-
     <body>
-        <div id="content-index">
-            <div id="center">
             <!--Form code for logging into connect's system.-->
                 <form id='login' action='validation.php' method='post' accept-charset='UTF-8'>
                     <fieldset>
@@ -38,8 +27,6 @@ if(empty($_SESSION['username'])) {
                         </div>
                     </fieldset>
                 </form>
-            </div>
-        </div>
     </body>
 
 </html>

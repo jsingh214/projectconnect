@@ -1,6 +1,6 @@
 <?php
 /*This code checks the connection to the database and contains information.*/
-$connection = mysqli_connect('localhost', 'root', 'sp2014', 'vpn');
+$connection = mysqli_connect('localhost', 'vpn', 'sp2014', 'vpn');
 
 if (mysqli_connect_errno())
   {

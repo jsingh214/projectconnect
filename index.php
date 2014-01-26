@@ -22,7 +22,7 @@
                             <input type='password' name='password' id='password' maxlength="50" />
                         </div>
                         <div class="break">
-                            <input type='submit' name='Submit' value='Submit' />
+                            <input type='submit' name='Login' value='Submit' />
                         </div>
                         </div>
                     </fieldset>

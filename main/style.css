@@ -10,6 +10,10 @@ body {
     padding-top: 200px;
 }
 
+h1 {
+    
+}
+
 form {
     max-width: 30em; /* Must be thinner than body. */
     margin-left: auto;

@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="main/style.css">
         <title>Home</title>
     </head>
-    <h1><a href=”logout.php”>Logout</a></h2>
+    <h1><a href=”logout.php”>Logout</a></h1>
     <body>
                 <table border="1">
                     <tr>

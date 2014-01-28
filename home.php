@@ -2,7 +2,7 @@
 <!--The home page contains a table where users can pick devices to configure.-->
 <html lang="en">
     <head>
-        <meta charset="utf8">
+        <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="main/style.css">
         <title>Home</title>
     </head>

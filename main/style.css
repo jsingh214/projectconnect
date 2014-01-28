@@ -2,12 +2,16 @@
 
 body {
     font-family: "Courier New", "Lucida Console", Monospace;
-    color: white; /* Make text contrast with bg image. */
+    color: white; /* Make text contrast with background image. */
 	background: url(../images/logo.jpg) no-repeat;
     max-width: 50em;
     margin-left: auto;
     margin-right: auto;
     padding-top: 200px;
+}
+
+button {
+    border-radius: 10px;
 }
 
 form {

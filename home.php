@@ -36,7 +36,7 @@
                         <td>Pending...</td>
                     </tr>
                 </table>
-                <input type="button" value="Select Pod" onclick="selectPod()"></input>
+                <p><button>Submit</button></p>
     </body>
 
 </html>

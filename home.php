@@ -8,6 +8,7 @@
     </head>
     <a href="logout.php"><button>Logout</button> </a>
     <body>
+        <fieldset>
                 <table border="1">
                     <tr>
                         <th>Select:</th>
@@ -37,6 +38,7 @@
                     </tr>
                 </table>
                 <p><button>Submit</button></p>
+        </fieldset>
     </body>
 
 </html>

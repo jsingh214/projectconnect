@@ -18,16 +18,16 @@ $userdata = mysqli_query($connection,
 $num_row = mysqli_num_rows($userdata);
 
 /*This is where validation starts, if the number of rows, which is always 1, for the user doesn't equal 1, don't let though, otherwise let through.*/
-if($num_row != 1) {
-    header('Location: index.php');
-    echo "<p>You username or password is incorrect!</p>";
-    
-} else {
+if($num_row == 1) {
     while($row=mysqli_fetch_array($userdata)){
     session_start();
     $_SESSION['username'] = $username;
     header('Location: home.php');
     }
+    
+} else {
+    header('Location: index.php');
+    echo "<p>You username or password is incorrect!</p>";
 }
 /*Closes the connection here because connection only stays open until user is validated and in.*/
 mysqli_close($connection);

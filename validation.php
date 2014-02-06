@@ -1,6 +1,6 @@
 <?php
 /*User validation for our home page.*/
-require('connect.php');
+require('connect_users.php');
 mysqli_select_db($connection, "members");
 
 if (empty($_POST['username'])) {

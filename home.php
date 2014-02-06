@@ -1,3 +1,8 @@
+<?php
+require('connect_equipment.php');
+mysqli_select_db($connection, "equipment");
+    ?>
+
 <!DOCTYPE html>
 <!--The home page contains a table where users can pick devices to configure.-->
 <html lang="en">
@@ -20,7 +25,7 @@
                             <input type="radio" name="selectedPod1" value="pod1">
                         </td>
                         <td>1</td>
-                        <td>Pending...</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>

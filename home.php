@@ -1,7 +1,6 @@
 <?php
 require('connect_equipment.php');
-mysqli_select_db($connection, "equipment");
-    ?>
+?>
 
 <!DOCTYPE html>
 <!--The home page contains a table where users can pick devices to configure.-->
@@ -13,37 +12,24 @@ mysqli_select_db($connection, "equipment");
     </head>
     <a href="logout.php"><button>Logout</button> </a>
     <body>
-        <fieldset>
-                <table border="1">
-                    <tr>
-                        <th>Select:</th>
-                        <th>Pods:</th>
-                        <th>List of Equipment:</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="radio" name="selectedPod1" value="pod1">
-                        </td>
-                        <td>1</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="radio" name="selectedPod2" value="pod2">
-                        </td>
-                        <td>2</td>
-                        <td>Pending...</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="radio" name="selectedPod3" value="pod3">
-                        </td>
-                        <td>3</td>
-                        <td>Pending...</td>
-                    </tr>
-                </table>
-                <p><button>Submit</button></p>
-        </fieldset>
-    </body>
+    <?php
+        $result = mysqli_query($connection,"SELECT * FROM pods");
 
+        echo "<table border='1'>
+        <tr>
+        <th>Pod Number:</th>
+        <th>Pod Equipment:</th>
+        
+        </tr>";
+
+        while($row = mysqli_fetch_array($result))
+          {
+          echo "<tr>";
+          echo "<td>" . $row['pod_id'] . "</td>";
+          echo "<td>" . $row['pod_desc'] . "</td>";
+          echo "</tr>";
+          }
+        echo "</table>";
+        ?>
+    </body>
 </html>

@@ -11,6 +11,7 @@ if (empty($_POST['password'])) {
 } 
 $username = mysqli_real_escape_string($connection, $_POST["username"]);
 $password = mysqli_real_escape_string($connection, $_POST["password"]);
+/*$encrpypt_password = sha1($password);*/
 
 $userdata = mysqli_query($connection,
     "SELECT * FROM members WHERE username='$username' and password='$password'"

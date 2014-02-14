@@ -3,11 +3,27 @@
 body {
     font-family: "Courier New", "Lucida Console", Monospace;
     color: white; /* Make text contrast with background image. */
-	background: url(../images/logo.jpg) no-repeat;
-    max-width: 50em;
+	background-color:black;
+	/*background: url(../images/logo.jpg) no-repeat;*/
+    /*max-width: 50em;*/
     margin-left: auto;
     margin-right: auto;
     padding-top: 200px;
+}
+
+a {
+	text-align:center;
+	position:relative;
+	color:green;
+	margin-left:10em;
+}
+
+a.hover {
+	color:red;
+}
+
+a.visited {
+	color:purple;
 }
 
 button {
@@ -18,6 +34,7 @@ form {
     max-width: 30em; /* Must be thinner than body. */
     margin-left: auto;
     margin-right: auto;
+	margin-top:10em;
 }
 
 /*Code for text boxes with glowing borders. */
@@ -31,10 +48,21 @@ input:focus {
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
+	
 }
+
 /*nav is a featured div in html5 for use as a nav bar.... who woulda thought....*/
 nav {
-	width:100%;
-	height:5em; /*for testing*/
-	background-color:red; /*for testing purposes yet again...*/
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-13em;
+	height:1.5em; /*for testing*/
+	background-color:black; /*for testing purposes yet again...*/
+}
+
+/*same as nav but header*/
+header {
+	height:20em;
+	background: url(../images/banner.jpg) no-repeat;
+	margin-top:-13em;
 }

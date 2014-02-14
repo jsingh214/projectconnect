@@ -8,8 +8,12 @@
         <title>Welcome</title>
     </head>
     <body>
+	<header>
+	</header>
 	<nav>
-		
+	<a href=""><b>Home</b></a> 	
+	<a href=""><b>Admin</b></a>
+	<a href=""><b>Logout</b></a>
 	</nav>
         <!--Form code for logging into connect's system.-->
         <form id='login' action='validation.php' method='post' accept-charset='UTF-8'>

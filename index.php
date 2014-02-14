@@ -8,6 +8,9 @@
         <title>Welcome</title>
     </head>
     <body>
+	<nav>
+		
+	</nav>
         <!--Form code for logging into connect's system.-->
         <form id='login' action='validation.php' method='post' accept-charset='UTF-8'>
         <!--The fieldset is being used for the thin white border around the form.-->

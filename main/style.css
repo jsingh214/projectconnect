@@ -32,3 +32,9 @@ input:focus {
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
 }
+/*nav is a featured div in html5 for use as a nav bar.... who woulda thought....*/
+nav {
+	width:100%;
+	height:5em; /*for testing*/
+	background-color:red; /*for testing purposes yet again...*/
+}

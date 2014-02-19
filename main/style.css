@@ -4,7 +4,7 @@ body {
     font-family: "Courier New", "Lucida Console", Monospace;
     color: white; /* Make text contrast with background image. */
 	background-color:black;
-	/*background: url(../images/logo.jpg) no-repeat;*/
+	background: url(../images/background_small.png);
     /*max-width: 50em;*/
     margin-left: auto;
     margin-right: auto;
@@ -12,10 +12,10 @@ body {
 }
 
 a {
-	text-align:center;
 	position:relative;
 	color:green;
-	margin-left:10em;
+	padding-left:10em;
+	
 }
 
 a.hover {
@@ -53,16 +53,18 @@ input:focus {
 
 /*nav is a featured div in html5 for use as a nav bar.... who woulda thought....*/
 nav {
+	text-align:center;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:-13em;
 	height:1.5em; /*for testing*/
-	background-color:black; /*for testing purposes yet again...*/
+	/*background-color:black; for testing purposes yet again...*/
 }
 
 /*same as nav but header*/
 header {
 	height:20em;
 	background: url(../images/banner.jpg) no-repeat;
+	background-size:100%;
 	margin-top:-13em;
 }

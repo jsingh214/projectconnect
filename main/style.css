@@ -4,8 +4,7 @@ body {
     font-family: "Courier New", "Lucida Console", Monospace;
     color: white; /* Make text contrast with background image. */
 	background-color:black;
-	background: url(../images/background_small.png);
-    /*max-width: 50em;*/
+	background: url(../images/background_small_2.png);
     margin-left: auto;
     margin-right: auto;
     padding-top: 200px;
@@ -58,7 +57,7 @@ nav {
 	margin-right:auto;
 	margin-top:-13em;
 	height:1.5em; /*for testing*/
-	/*background-color:black; for testing purposes yet again...*/
+
 }
 
 /*same as nav but header*/

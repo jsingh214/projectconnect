@@ -9,7 +9,7 @@ body {
     margin-right: auto;
     padding-top: 200px;
 }
-
+/*
 a {
 	position:relative;
 	color:green;
@@ -24,6 +24,7 @@ a.hover {
 a.visited {
 	color:purple;
 }
+*/
 
 button {
     border-radius: 0.5em;

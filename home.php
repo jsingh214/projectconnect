@@ -1,27 +1,39 @@
 <?php
 require('connect_equipment.php');
 
-        //echo Welcome: ; echo $_SESSION['username'];
-        $result = mysqli_query($connection,"SELECT * FROM pods");
-        $rows = array();
-        echo "<table border='1'>
-        <tr>
-        <th>Pod Number:</th>
-        <th>Pod Equipment:</th>
-        
-        </tr>";
+$check = true;
+if ($connection->connect_errno) {
+	echo "Failed to connect to MySQL: (" . $connection->connect_errno . ") "
+	. $connection->connect_error;
+    $check=false;
+} 
 
-        while($row = mysqli_fetch_array($result))
-          {
-          $table = $rows[0];
-          $rowButtons .= "<input type='radio' name='table' value={$table}>{$table}<br>\n";
-          "<tr>";
-          "<td>" . $row['pod_id'] . "</td>";
-          "<td>" . $row['pod_desc'] . "</td>";
-          "</tr>";
-          }
-        echo "</table>";
-        ?>
+if($check==true) {
+  $sql = "SELECT * FROM pods";
+  $result_db = $connection->query($sql);
+
+  if (!$result_db) {
+		echo $connection->error . ' Error perform query!';
+  }
+
+
+  else {
+                 while ($row = $result_db->fetch_object()) {
+			echo "<input type=\"radio\" name=\"pod\" 
+                             value=\"{$row->pod_id}\" 
+                             id=\"id{$row->pod_id}\"/>";
+            echo "<label for=\"id{$row->pod_id}\">
+                                $row->pod_id</label>";
+			echo "<label for=\"id{$row->pod_desc}\">
+                                $row->pod_desc</label>";
+            echo "<label for=\"id{$row->status}\">
+                                $row->status</label><br/>";
+		}
+	}
+}
+
+$connection->close();
+?>
 
 <!DOCTYPE html>
 <!--The home page contains a table where users can pick devices to configure.-->
@@ -33,10 +45,5 @@ require('connect_equipment.php');
     </head>
     <a href="logout.php"><button>Logout</button> </a>
     <body>
-    <form name='equipment' action='validation.php' method='post'>
-    <?php echo $rowButtons; ?>
-    <br><br>
-    <input type="submit" value="Select Pod">
-    </form>
     </body>
 </html>

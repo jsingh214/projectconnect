@@ -1,50 +1,23 @@
-<!DOCTYPE html>
+<?php
+/*Connection information for our user database.*/
+$connection = mysqli_connect('localhost', 'vpn', 'sp2014', 'vpn');
 
-<!-- This is the login page for project connect.-->
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="main/style.css">
-        <title>Welcome</title>
-    </head>
-    <body>
-	<header>
-	</header>
-    <!--
-	<nav>
-	<a href="index.php"><b>Home</b></a> 	
-	<a href="admin.php"><b>Admin</b></a>
-	<a href="logout.php"><b>Logout</b></a>
-	</nav>
-    -->
-        <!--Form code for logging into connect's system.-->
-        <form id='login' action='submit.php' method='post' accept-charset='UTF-8'>
-        <!--The fieldset is being used for the thin white border around the form.-->
-         <fieldset>
-            <h1>Create User</h1>
-            <input type='hidden' name='submitted' id='submitted' value='1' />
-            <p><label>
-                Username:
-                <br><input type='text' name='username' maxlength="50" />
-            </label></p>
-            <p><label>
-                Password:
-                <br><input type='password' name='password' maxlength="50" />
-            </label></p>
-            <p><label>
-                First Name:
-                <br><input type='firstname' name='firstname' maxlength="50" />
-            </label></p>
-            <p><label>
-                Last Name:
-                <br><input type='lastname' name='lastname' maxlength="50" />
-            </label></p>
-            <p><label>
-                Email:
-                <br><input type='email' name='email' maxlength="50" />
-            </label></p>
-            <p><button>Submit</button></p>
-            </fieldset>
-        </form>
-    </body>
-</html>
+if (!$connection) {
+    die('Connection Error: (' . mysqli_connect_errno() . ') '
+            . mysqli_connect_error());
+}
+$password = mysqli_real_escape_string($connection, $_POST["password"]);
+$crypt_password = sha1($password);
+
+$sql="INSERT INTO members (username, password, firstname, lastname, email)
+VALUES
+('$_POST[username]','$_POST[crypt_password]','$_POST[firstname]','$_POST[lastname]','$_POST[email]')";
+
+if (!mysqli_query($connection,$sql))
+  {
+  die('Error: ' . mysqli_error($connection));
+  }
+echo "1 record added";
+
+mysqli_close($connection);
+?>

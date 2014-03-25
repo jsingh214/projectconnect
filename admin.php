@@ -11,8 +11,8 @@
     <header>
 	</header>
 <ul>
-<li><a href="create.php">Create User</a></li>
-<li><a href="delete.php">Delete User</a></li>
+<li><a href="create_user.php">Create User</a></li>
+<li><a href="delete_user.php">Delete User</a></li>
 </ul>
     </body>
 </html>

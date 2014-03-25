@@ -32,6 +32,7 @@ if($check==true) {
 
   else {
   echo "<table border='1'>";
+  while ($row = $result_db->fetch_object()) {
                              
 			echo "<tr><td><input type=\"radio\" name=\"delete\" 
                              value=\"{$row->mem_id}\" 
@@ -45,6 +46,7 @@ if($check==true) {
 		}
         echo "</table>";
 	}
+    }
 ?>
 
     <p><button>Delete Pod</button></p>

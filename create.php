@@ -25,23 +25,23 @@
             <input type='hidden' name='submitted' id='submitted' value='1' />
             <p><label>
                 Username:
-                <input type='text' name='username' maxlength="50" />
+                <br><input type='text' name='username' maxlength="50" />
             </label></p>
             <p><label>
                 Password:
-                <input type='password' name='password' maxlength="50" />
+                <br><input type='password' name='password' maxlength="50" />
             </label></p>
             <p><label>
                 First Name:
-                <input type='firstname' name='firstname' maxlength="50" />
+                <br><input type='firstname' name='firstname' maxlength="50" />
             </label></p>
             <p><label>
                 Last Name:
-                <input type='lastname' name='lastname' maxlength="50" />
+                <br><input type='lastname' name='lastname' maxlength="50" />
             </label></p>
             <p><label>
                 Email:
-                <input type='email' name='email' maxlength="50" />
+                <br><input type='email' name='email' maxlength="50" />
             </label></p>
             <p><button>Submit</button></p>
             </fieldset>

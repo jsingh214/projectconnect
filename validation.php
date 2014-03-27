@@ -1,7 +1,6 @@
 <?php
 /*User validation for our home page.*/
 require('connect_users.php');
-mysqli_select_db($connection, "members");
 
 if (empty($_POST['username'])) {
     echo "<p>You need to enter a username!</p>";

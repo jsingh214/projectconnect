@@ -1,10 +1,6 @@
 <?php
 /*Connection information for our user database.*/
-$connection = mysqli_connect('localhost', 'vpn', 'sp2014', 'vpn');
-
-if (!$connection) {
-    die('Connection Error: (' . mysqli_connect_errno() . ') '
-            . mysqli_connect_error());
+require('connect_users.php');
 }
 $password = mysqli_real_escape_string($connection, $_POST["password"]);
 $crypt_password = sha1($password);

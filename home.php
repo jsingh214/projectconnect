@@ -10,7 +10,7 @@
     <body>
     <header>
 	</header>
-        <form name='pods' action='pod_select.php'>
+        <form name='pods' action='pod_select.php' method='post'>
         <?php
 require('connect_equipment.php');
 
@@ -28,8 +28,6 @@ if($check==true) {
   if (!$result_db) {
 		echo $connection->error . ' Error performing query!';
   }
-
-
   else {
   echo "<table border='1'>";
                  while ($row = $result_db->fetch_object()) {

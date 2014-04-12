@@ -13,7 +13,6 @@ if (!mysqli_query($connection,$sql))
   {
   die('Error: ' . mysqli_error($connection));
   }
-echo "1 record added";
-
 mysqli_close($connection);
+header("Location: create_user.php");
 ?>

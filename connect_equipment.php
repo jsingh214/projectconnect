@@ -6,5 +6,5 @@ if (!$connection) {
     die('Connection Error: (' . mysqli_connect_errno() . ') '
             . mysqli_connect_error());
 }
-mysqli_select_db($connection, "equipment");
+mysqli_select_db($connection, "pods");
 ?>

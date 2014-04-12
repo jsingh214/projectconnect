@@ -31,10 +31,6 @@ if($check==true) {
   else {
   echo "<table border='1'>";
                  while ($row = $result_db->fetch_object()) {
-                 /*$row->status = $status;
-                 if($status = 0)
-                 { $status = "Off"}
-                 else{$status = "On"}*/
                  
 			echo "<tr><td><input type=\"radio\" name=\"pod\" 
                              value=\"{$row->pod_id}\"

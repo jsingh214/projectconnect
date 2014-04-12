@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function device1(){
+
+	// Check browser support
+	if (typeof(Storage) != "undefined")
+	  {
+	  // Store
+	  localStorage.setItem("device", "telnet 192.168.1.1");
+	  // Retrieve
+	  document.getElementById("result1").innerHTML=localStorage.getItem("device1");
+
+	  }
+	else
+	  {
+	  document.getElementById("result1").innerHTML="Sorry, your browser does not support Web Storage...";
+	  }
+}
+
+function device2(){
+	// Check browser support
+	if (typeof(Storage) != "undefined")
+		{
+		//Store
+		localStorage.setItem("device", "telnet 192.168.1.3");
+		//Retrieve
+		document.getElementById("result2").innerHTML=localStorage.getItem("device2");
+		}
+	else
+		{
+		documen.getElementById("result2").innerHTML="Sorry, your brower does not support web storage";
+		
+		}
+
+}
+  
+</script>
+
+<script type="text/javascript">
+window.onload = function(){
+	document.getElementsByClassName('deviceChoice')[0].addEventListener('click', function(){
+		var ifr = document.getElementById('iframe')[0];
+		ift.src = ifr.src;
+	})
+}
+</script>
+
+<script type="text/javascript">
+window.onload = function(){
+	document.getElementsByClassName('deviceChoice')[1].addEventListener('click', function(){
+		var ifr = document.getElementById('iframe')[0];
+		ift.src = ifr.src;
+	})
+}
+</script>
+
+
+<div id="result"></div>
+<form>
+<button class="deviceChoice" onclick="device1(); refresh();">Device1</button>
+<button class="deviceChoice" onclick="device2(); refresh();">Device2</button>
+
+</form>
+
+<iframe name="iframe" src="test1.html" width="200" height="200" border="1">
+
+</iframe>
+
+</body>
+</html>

@@ -2,9 +2,12 @@
 /*Connection information for our user database.*/
 require('connect_users.php');
 
-foreach($_POST['delete'] as $mem_id) {
-    mysqli_query("DELETE FROM members WHERE ID=".$mem_id)
-}
+
+if (!mysqli_query($connection, "DELETE FROM members WHERE mem_id=".$_POST['delete']))
+  {
+  die('Error: ' . mysqli_error($connection));
+  }
 
 mysqli_close($connection);
+header("Location: delete_user.php");
 ?>

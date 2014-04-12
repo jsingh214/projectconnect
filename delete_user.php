@@ -6,11 +6,12 @@
         <link rel="stylesheet" type="text/css" href="main/style.css">
         <title>Home</title>
     </head>
-    <a href="logout.php"><button>Logout</button> </a>
     <body>
+    <a href="logout.php"><button>Logout</button> </a>
+    <a href="home.php"><button>Home</button> </a>
     <header>
 	</header>
-        <form name='pods' action='delete.php'>
+        <form name='users' action='delete.php' method='post'>
         <?php
 require('connect_users.php');
 
@@ -34,9 +35,9 @@ if($check==true) {
   echo "<table border='1'>";
   while ($row = $result_db->fetch_object()) {
                              
-			echo "<tr><td><input type=\"checkbox\" name=\"delete[]\" 
+			echo "<tr><td><input type=\"radio\" name=\"delete\" 
                              value=\"{$row->mem_id}\" 
-                             id=\"id{$row->mem_id}\"/></td>";
+                             name=\"id{$row->mem_id}\"/></td>";
             echo "<td><label for=\"id{$row->firstname}\">
                                 $row->firstname</label></td>";
 			echo "<td><label for=\"id{$row->lastname}\">
@@ -49,7 +50,7 @@ if($check==true) {
     }
 ?>
 
-    <p><button>Delete Users</button></p>
+    <p><input type="submit" value="Delete User"></p>
     </form>
     </body>
 </html>

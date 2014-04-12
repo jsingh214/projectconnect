@@ -1,6 +1,7 @@
 <?php
-    if (isset($_POST["$row"])
-    && $_POST["$row"] == "1") {
+
+    if (isset($_POST["pod"])
+    && $_POST["pod"] == "1") {
         header('Location: pod1.php');
     } else if (isset($_POST["2"])
     && $_POST["$row"] == "2") {
@@ -11,4 +12,5 @@
     } else {
         echo "Error!";
     }
-?>
+
+    ?>

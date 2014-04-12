@@ -37,7 +37,8 @@ if($check==true) {
                  else{$status = "On"}*/
                  
 			echo "<tr><td><input type=\"radio\" name=\"pod\" 
-                             value=\"{$row->pod_id}\" 
+                             value=\"{$row->pod_id}\"
+                             name=\"{$row->pod_id}\"
                              id=\"id{$row->pod_id}\"/></td>";
             echo "<td><label for=\"id{$row->pod_id}\">
                                 $row->pod_id</label></td>";
@@ -51,7 +52,7 @@ if($check==true) {
 }
 ?>
 
-    <p><button>Select Pod</button></p>
+    <p><input type="submit" value="Select Pod"></p>
     </form>
     </body>
 </html>

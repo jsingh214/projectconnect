@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <!--The home page contains a table where users can pick devices to configure.-->
+<?php
+    session_start();
+    if ($_SESSION["username"] == null)
+    {
+        header('Location: index.php');
+    }
+?>
 <html lang="en">
     <head>
         <meta charset="utf-8">

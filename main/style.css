@@ -9,21 +9,7 @@ body {
     margin-right: auto;
     padding-top: 200px;
 }
-/*
-a {
-	position:relative;
-	color:green;
-	padding-left:10em;
-	
-}
 
-a.hover {
-	color:red;
-}
-
-a.visited {
-	color:purple;
-}
 */
 
 button {
@@ -51,17 +37,8 @@ input:focus {
 	
 }
 
-/*nav is a featured div in html5 for use as a nav bar.... who woulda thought....*/
-nav {
-	text-align:center;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:-13em;
-	height:1.5em; /*for testing*/
 
-}
-
-/*same as nav but header*/
+/*Header*/
 header {
 	height:20em;
 	background: url(../images/banner.jpg) no-repeat;
@@ -72,4 +49,10 @@ header {
 ul li{
 color: #FFF;
 font-size: 50px;
+}
+
+a
+{
+    color: #ffffff;
+    text-decoration: none;
 }

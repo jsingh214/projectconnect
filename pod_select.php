@@ -2,7 +2,7 @@
 
     if (isset($_POST["pod"])
     && $_POST["pod"] == "1") {
-        header('Location: pod1.php');
+        header('Location: anyterm-1.1.29/browser/anyterm.html');
     } else if (isset($_POST["2"])
     && $_POST["$row"] == "2") {
         header('Location: pod2.php');

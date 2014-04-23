@@ -1,6 +1,6 @@
 <?php
-/*Connection information for our equipment database.*/
-$connection = mysqli_connect('localhost', 'connect', 'sp2014', 'connect');
+/*Connection information for our user database.*/
+$connection = mysqli_connect('localhost', 'root', 'Sp2014', 'connect');
 
 if (!$connection) {
     die('Connection Error: (' . mysqli_connect_errno() . ') '

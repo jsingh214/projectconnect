@@ -47,8 +47,8 @@ if($check==true) {
                                 $row->pod_id</label></td>";
 			echo "<td><label for=\"id{$row->pod_desc}\">
                                 $row->pod_desc</label></td>";
-            echo "<td><label for=\"id{$row->status}\">
-                                $row->status</label><br/></td></tr>";
+            //echo "<td><label for=\"id{$row->status}\">
+            //                    $row->status</label><br/></td></tr>";
 		}
         echo "</table>";
 	}

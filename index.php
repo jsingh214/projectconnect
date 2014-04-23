@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <!-- This is the login page for project connect.-->
+<?php
+    session_start();
+    if (isset($_SESSION["username"]) && $_SESSION["username"] == "admin")
+    {
+        header('Location: admin.php');
+    }
+    elseif (isset($_SESSION["username"]) && $_SESSION["username"] != null)
+    {
+        header('Location: home.php');
+    }
 
-
+?>
 <html lang="en">
    <head>
       <meta charset="utf-8">

@@ -23,6 +23,7 @@
        while($row=mysqli_fetch_array($userdata)){
        session_start();
        $_SESSION['username'] = $username;
+       $_SESSION['mem_id'] = $row["mem_id"];
        if($_SESSION['username']  == 'admin'){
        header('Location: admin.php');
        }

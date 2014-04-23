@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <!--The user administrator page.-->
-
+<?php
+    session_start();
+    if ($_SESSION["username"] == null)
+    {
+        header('Location: index.php');
+    }
+    elseif ($_SESSION["username"] != "admin")
+    {
+        header('Location: home.php');
+    }
+?>
 <html lang="en">
    <head>
       <meta charset="utf-8">

@@ -36,7 +36,7 @@ if ($check == true) {
         echo "<table border='1'><tr><td></td><td><label><strong>Pod Number:</strong></label></td><td><label><strong>Pod Devices:</strong></label></td><td><label><strong>Status:</strong></label></td></tr>";
         while ($row = $result_db->fetch_object()) {
             if (is_null($row->mem_id)) {
-                echo "<tr><td><input type=\"radio\" name=\"pod\" 
+                echo "<tr><td><input onclick=\"this.form.submit();\" type=\"radio\" name=\"pod\" 
                              value=\"{$row->pod_id}\"
                              name=\"{$row->pod_id}\"
                              id=\"id{$row->pod_id}\"/></td>";
@@ -64,8 +64,6 @@ if ($check == true) {
     }
 }
 ?>
-
-    <p><input type="submit" value="Select Pod"></p>
     </form>
     </body>
 </html>

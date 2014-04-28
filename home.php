@@ -33,7 +33,7 @@ if ($check == true) {
     if (!$result_db) {
         echo $connection->error . ' Error performing query!';
     } else {
-        echo "<table border='1'>";
+        echo "<table border='1'><tr><td></td><td><label><strong>Pod Number:</strong></label></td><td><label><strong>Pod Devices:</strong></label></td><td><label><strong>Status:</strong></label></td></tr>";
         while ($row = $result_db->fetch_object()) {
             if (is_null($row->mem_id)) {
                 echo "<tr><td><input type=\"radio\" name=\"pod\" 

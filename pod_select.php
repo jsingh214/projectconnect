@@ -19,7 +19,7 @@ function checkoutPod($pod_id){
     } else if (isset($_POST["pod"])
     && $_POST["pod"] == "2") {
         checkoutPod($_POST["pod"]);
-        header('Location: pod2.php');
+        header('Location: anyterm-1.1.29/browser/anyterm.html');
     } else if (isset($_POST["pod"])
     && $_POST["pod"] == "3") {
         checkoutPod($_POST["pod"]);   

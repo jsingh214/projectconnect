@@ -10,17 +10,24 @@ body {
     padding-top: 200px;
 }
 
-*/
+button.logout { 
+    float: right; 
+}
 
 button {
     border-radius: 0.5em;
 }
 
+fieldset {
+    margin-top: 200px;
+}
+
+
 form {
     max-width: 30em; /* Must be thinner than body. */
     margin-left: auto;
     margin-right: auto;
-	margin-top:10em;
+	margin-top:5em;
 }
 
 /*Code for text boxes with glowing borders. */
@@ -40,7 +47,7 @@ input:focus {
 
 /*Header*/
 header {
-	height:20em;
+	height:9em;
 	background: url(../images/banner.jpg) no-repeat;
 	background-size:100%;
 	margin-top:-13em;
@@ -55,4 +62,12 @@ a
 {
     color: #ffffff;
     text-decoration: none;
+}
+
+table{
+width:100%;
+}
+tr
+{
+height:65px;
 }

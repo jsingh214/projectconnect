@@ -25,7 +25,7 @@
       <form id='login' action='validation.php' method='post' accept-charset='UTF-8'>
          <!--The fieldset is being used for the thin white border around the form.-->
          <fieldset>
-            <h1>Login</h1>
+            <h1>Project Connect</h1>
             <input type='hidden' name='submitted' id='submitted' value='1' />
             <p><label>
                Username:

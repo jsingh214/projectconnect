@@ -12,7 +12,7 @@ if ($_SESSION["username"] == null) {
         <link rel="stylesheet" type="text/css" href="main/style.css">
         <title>Home</title>
     </head>
-    <a href="logout.php"><button>Logout</button> </a>
+    <a href="logout.php"><button class="logout">Logout</button> </a>
     <body>
     <header>
     </header>

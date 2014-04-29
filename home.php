@@ -16,7 +16,7 @@ if ($_SESSION["username"] == null) {
     <?php 
     if ($_SESSION["username"] == "admin")
     {
-        echo "<a href="admin.php"><button class="logout">Admin Panel</button> </a>";
+        echo '<a href="admin.php"><button class="logout">Admin Panel</button> </a>';
     }
     ?>
     <body>

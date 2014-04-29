@@ -19,7 +19,7 @@ if ($_SESSION["username"] == null) {
     </header>
         <form name='pods' action='clear.php' method='post'>
         <?php
-        echo "<h1>Note: Clearing pods will sign out admin each time to clear session data.</h1>" ;
+        echo "<h1>Warning: Clearing pods will sign out admin each time to clear session data.</h1>" ;
 require('connect_equipment.php');
 
 $check = true;

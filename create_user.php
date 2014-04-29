@@ -19,7 +19,7 @@
    </head>
    <body>
       <a href="logout.php"><button class="logout">Logout</button> </a>
-      <a href="home.php"><button class="logout">Home</button> </a>
+      <a href="admin.php"><button class="logout">Admin Panel</button> </a>
       <header>
       </header>
       <!--Form code for logging into connect's system.-->

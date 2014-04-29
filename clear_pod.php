@@ -13,17 +13,13 @@ if ($_SESSION["username"] == null) {
         <title>Home</title>
     </head>
     <a href="logout.php"><button class="logout">Logout</button> </a>
-    <?php 
-    if ($_SESSION["username"] == "admin")
-    {
-        echo "<a href="admin.php"><button class="logout">Admin Panel</button> </a>";
-    }
-    ?>
+    <a href="admin.php"><button class="logout">Admin Panel</button> </a>
     <body>
     <header>
     </header>
-        <form name='pods' action='pod_select.php' method='post'>
+        <form name='pods' action='clear.php' method='post'>
         <?php
+        echo "<h1>Note: Clearing pods will sign out admin each time to clear session data.</h1>" ;
 require('connect_equipment.php');
 
 $check = true;
@@ -41,20 +37,8 @@ if ($check == true) {
     } else {
         echo "<table border='1'><tr><td></td><td><label><strong>Pod Number:</strong></label></td><td><label><strong>Pod Devices:</strong></label></td><td><label><strong>Status:</strong></label></td></tr>";
         while ($row = $result_db->fetch_object()) {
-            if (is_null($row->mem_id)) {
+            if (!is_null($row->mem_id)) {
                 echo "<tr><td><input onclick=\"this.form.submit();\" type=\"radio\" name=\"pod\" 
-                             value=\"{$row->pod_id}\"
-                             name=\"{$row->pod_id}\"
-                             id=\"id{$row->pod_id}\"/></td>";
-                echo "<td><label for=\"id{$row->pod_id}\">
-                                $row->pod_id</label></td>";
-                echo "<td><label for=\"id{$row->pod_desc}\">
-                                $row->pod_desc</label></td>";              
-                echo "<td><label for=\"id{$row->mem_id}\">
-                                Available</label><br/></td></tr>";
-            }
-            else {
-                echo "<tr><td><input disabled type=\"radio\" name=\"pod\" 
                              value=\"{$row->pod_id}\"
                              name=\"{$row->pod_id}\"
                              id=\"id{$row->pod_id}\"/></td>";
@@ -64,8 +48,9 @@ if ($check == true) {
                                 $row->pod_desc</label></td>";
                 echo "<td><label for=\"id{$row->mem_id}\">
                                 Checked out by: $row->username</label><br/></td></tr>";
-            }
-        }
+            }   
+        }      
+
         echo "</table>";
     }
 }
